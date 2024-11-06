@@ -44,14 +44,6 @@ public class DepartmentServiceIMPL implements DepartmentService {
                 .map(departmentMapper::toDTO)
                 .collect(Collectors.toList());
     }
-
-    @Override
-    public DepartmentDTO updateDepartment(DepartmentDTO departmentDTO) {
-        Department department = departmentMapper.toEntity(departmentDTO);
-        Department updatedDepartment = departmentRepository.save(department);
-        return departmentMapper.toDTO(updatedDepartment);
-    }
-
     @Override
     public void deleteDepartmentById(String deptName) {
         departmentRepository.deleteById(deptName);
