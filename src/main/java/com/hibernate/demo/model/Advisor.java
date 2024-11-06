@@ -1,24 +1,32 @@
 package com.hibernate.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "advisor")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Advisor {
+
     @Id
     @Column(name = "s_ID", length = 5)
-    private String sId;  // This will be our primary key
+    private String sid;
 
     @Column(name = "i_ID", length = 5)
-    private String iId;
+    private String iid;
 
-    @OneToOne(fetch = FetchType.LAZY) // non-owning side of the relationship
-    @JoinColumn(name = "s_ID", referencedColumnName = "ID", insertable = false, updatable = false)
-    private Student student;
-
-    @ManyToOne(fetch = FetchType.LAZY) // non-owning side of the relationship
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "i_ID", referencedColumnName = "ID", insertable = false, updatable = false)
+    @JsonIgnore
     private Instructor instructor;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "s_ID", referencedColumnName = "ID", insertable = false, updatable = false)
+    @JsonIgnore
+    private Student student;
 }
