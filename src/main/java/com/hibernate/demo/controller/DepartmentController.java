@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/uni/departments")
@@ -41,9 +42,14 @@ public class DepartmentController {
 
     @PutMapping("/{deptName}")
     public ResponseEntity<DepartmentDTO> updateDepartment(@PathVariable String deptName, @RequestBody DepartmentDTO departmentDTO) {
-        departmentDTO.setDeptName(deptName); // Güncellemeyi yapmadan önce deptName'i DTO'ya ayarlıyoruz
-        DepartmentDTO updatedDepartment = departmentService.updateDepartment(departmentDTO);
-        return new ResponseEntity<>(updatedDepartment, HttpStatus.OK);
+        Optional<DepartmentDTO> existDept = departmentService.getDepartmentById(deptName);
+        if (existDept.isPresent()){
+            departmentDTO.setDeptName(deptName);
+            DepartmentDTO updatedDepartment = departmentService.saveDepartment(departmentDTO);
+            return new ResponseEntity<>(updatedDepartment, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
     }
 
     @DeleteMapping("/{deptName}")
