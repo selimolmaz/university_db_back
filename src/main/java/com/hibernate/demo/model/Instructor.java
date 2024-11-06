@@ -1,12 +1,17 @@
 package com.hibernate.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "instructor")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Instructor {
     @Id
     @Column(name = "ID", length = 5)
@@ -19,9 +24,11 @@ public class Instructor {
     @Min(value = 28999, message = "Salart must be greater than 29000")
     private Integer salary;
 
-    @ManyToOne
-    @JoinColumn(name = "dept_name", referencedColumnName = "dept_name",
-            foreignKey = @ForeignKey(name = "FK_Instructor_Department"),
-            nullable = true)
+    @Column(name = "dept_name", length = 20)
+    private String deptName;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "dept_name", referencedColumnName = "dept_name", insertable = false, updatable = false)
+    @JsonIgnore
     private Department department;
 }
