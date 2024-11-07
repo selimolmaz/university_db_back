@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "instructor")
 @Data
@@ -22,7 +24,7 @@ public class Instructor {
 
     @Column(name = "salary", precision = 8, scale = 2)
     @Min(value = 28999, message = "Salart must be greater than 29000")
-    private Integer salary;
+    private BigDecimal salary;
 
     @Column(name = "dept_name", length = 20)
     private String deptName;
