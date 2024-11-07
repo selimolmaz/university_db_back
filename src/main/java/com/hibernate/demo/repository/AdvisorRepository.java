@@ -8,5 +8,4 @@ import java.util.List;
 
 @Repository
 public interface AdvisorRepository extends JpaRepository<Advisor, String> {
-    List<Advisor> findByIid(String iId);
 }
