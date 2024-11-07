@@ -8,6 +8,5 @@ import java.util.List;
 
 @Repository
 public interface AdvisorRepository extends JpaRepository<Advisor, String> {
-    Advisor findBySid(String sId);
     List<Advisor> findByIid(String iId);
 }
