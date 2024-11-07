@@ -1,0 +1,17 @@
+package com.hibernate.demo.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class CourseDTO {
+    private String courseId;
+    private String title;
+    private String deptName;
+    private BigDecimal credits;
+}
