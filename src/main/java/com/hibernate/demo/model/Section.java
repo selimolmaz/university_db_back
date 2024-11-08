@@ -35,7 +35,6 @@ public class Section {
 
     @Id
     @Column(name = "year", precision = 4, scale = 0)
-    @Range(min = 1701, max = 2100, message = "Year must between 1701 and 2100")
     private int year;
 
     @Column(name = "building", length = 15)
