@@ -18,7 +18,7 @@ public class Takes {
 
     @Id
     @Column(name = "ID", length = 5)
-    private String id;
+    private String studentId;
 
     @Id
     @Column(name = "course_id", length = 8)
