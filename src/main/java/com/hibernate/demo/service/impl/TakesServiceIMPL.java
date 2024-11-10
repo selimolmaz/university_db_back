@@ -37,6 +37,14 @@ public class TakesServiceIMPL implements TakesService {
     }
 
     @Override
+    public List<TakesDTO> getAllTakesByStudentId(String studentId) {
+        return takesRepository.findByStudentId(studentId)
+                .stream()
+                .map(takesMapper::toDTO)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<TakesDTO> getAllTakes() {
         return takesRepository.findAll()
                 .stream()

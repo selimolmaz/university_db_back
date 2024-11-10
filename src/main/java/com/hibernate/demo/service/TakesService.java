@@ -9,6 +9,7 @@ import java.util.Optional;
 public interface TakesService {
     TakesDTO saveTakes(TakesDTO takesDTO);
     Optional<TakesDTO> getTakesById(TakesId takesId);
+    List<TakesDTO> getAllTakesByStudentId(String studentId);
     List<TakesDTO> getAllTakes();
     void deleteTakesById(TakesId takesId);
 }
