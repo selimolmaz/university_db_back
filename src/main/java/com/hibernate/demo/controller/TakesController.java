@@ -35,6 +35,11 @@ public class TakesController {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    @GetMapping("/{studentId}")
+    public ResponseEntity<List<TakesDTO>> getStudentTakesById(@PathVariable String studentId) {
+        List<TakesDTO> takesDTOS = takesService.getAllTakesByStudentId(studentId);
+        return new ResponseEntity<>(takesDTOS, HttpStatus.OK);
+    }
     @GetMapping
     public ResponseEntity<List<TakesDTO>> getAllTakes() {
         List<TakesDTO> takesList = takesService.getAllTakes();
