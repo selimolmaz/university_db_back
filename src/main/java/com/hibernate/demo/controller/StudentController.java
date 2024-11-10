@@ -53,6 +53,11 @@ public class StudentController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    @GetMapping("/department/{deptName}")
+    public ResponseEntity<List<StudentDTO>> getStudentsByDeptName(@PathVariable String deptName) {
+        List<StudentDTO> studentDTOS = studentService.getStudentsByDeptName(deptName);
+        return new ResponseEntity<>(studentDTOS, HttpStatus.OK);
+    }
     @DeleteMapping("/{studentId}")
     public ResponseEntity<Void> deleteStudentById(@PathVariable String studentId) {
         studentService.deleteStudentById(studentId);
