@@ -46,6 +46,14 @@ public class StudentServiceIMPL implements StudentService {
     }
 
     @Override
+    public List<StudentDTO> getStudentsByDeptName(String deptName) {
+        return studentRepository.findByDeptName(deptName)
+                .stream()
+                .map(studentMapper::toDTO)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public void deleteStudentById(String studentId) {
         studentRepository.deleteById(studentId);
     }

@@ -9,5 +9,6 @@ public interface StudentService {
     StudentDTO saveStudent(StudentDTO studentDTO);
     Optional<StudentDTO> getStudentById(String studentId);
     List<StudentDTO> getAllStudents();
+    List<StudentDTO> getStudentsByDeptName(String deptName);
     void deleteStudentById(String studentId);
 }
