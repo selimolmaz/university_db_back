@@ -28,14 +28,8 @@ public class TakesController {
         return new ResponseEntity<>(savedTakes, HttpStatus.CREATED);
     }
 
-    @GetMapping("/{id}/{courseId}/{secId}/{semester}/{year}")
-    public ResponseEntity<TakesDTO> getTakesById(
-            @PathVariable String id,
-            @PathVariable String courseId,
-            @PathVariable String secId,
-            @PathVariable String semester,
-            @PathVariable int year) {
-        TakesId takesId = new TakesId(id, courseId, secId, semester, year);
+    @GetMapping("/takesId")
+    public ResponseEntity<TakesDTO> getTakesById(@RequestBody TakesId takesId) {
         Optional<TakesDTO> takesDTO = takesService.getTakesById(takesId);
         return takesDTO.map(ResponseEntity::ok)
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
@@ -47,14 +41,8 @@ public class TakesController {
         return new ResponseEntity<>(takesList, HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id}/{courseId}/{secId}/{semester}/{year}")
-    public ResponseEntity<Void> deleteTakesById(
-            @PathVariable String id,
-            @PathVariable String courseId,
-            @PathVariable String secId,
-            @PathVariable String semester,
-            @PathVariable int year) {
-        TakesId takesId = new TakesId(id, courseId, secId, semester, year);
+    @DeleteMapping
+    public ResponseEntity<Void> deleteTakesById(@RequestBody TakesId takesId) {
         takesService.deleteTakesById(takesId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
