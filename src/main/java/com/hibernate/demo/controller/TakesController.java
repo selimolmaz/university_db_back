@@ -1,7 +1,7 @@
 package com.hibernate.demo.controller;
 
 import com.hibernate.demo.dto.TakesDTO;
-import com.hibernate.demo.model.TakesId;
+import com.hibernate.demo.model.compositeIds.TakesId;
 import com.hibernate.demo.service.TakesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

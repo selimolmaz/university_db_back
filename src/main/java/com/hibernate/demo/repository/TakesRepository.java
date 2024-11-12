@@ -1,7 +1,7 @@
 package com.hibernate.demo.repository;
 
 import com.hibernate.demo.model.Takes;
-import com.hibernate.demo.model.TakesId;
+import com.hibernate.demo.model.compositeIds.TakesId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

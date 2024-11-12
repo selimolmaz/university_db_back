@@ -3,14 +3,13 @@ package com.hibernate.demo.service.impl;
 import com.hibernate.demo.dto.TimeSlotDTO;
 import com.hibernate.demo.mapper.TimeSlotMapper;
 import com.hibernate.demo.model.TimeSlot;
-import com.hibernate.demo.model.TimeSlotId;
+import com.hibernate.demo.model.compositeIds.TimeSlotId;
 import com.hibernate.demo.repository.TimeSlotRepository;
 import com.hibernate.demo.service.TimeSlotService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class TimeSlotServiceIMPL implements TimeSlotService {

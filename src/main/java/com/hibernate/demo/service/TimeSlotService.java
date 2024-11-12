@@ -1,7 +1,7 @@
 package com.hibernate.demo.service;
 
 import com.hibernate.demo.dto.TimeSlotDTO;
-import com.hibernate.demo.model.TimeSlotId;
+import com.hibernate.demo.model.compositeIds.TimeSlotId;
 
 import java.util.List;
 import java.util.Optional;

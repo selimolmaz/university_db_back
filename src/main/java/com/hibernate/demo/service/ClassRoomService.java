@@ -1,7 +1,7 @@
 package com.hibernate.demo.service;
 
 import com.hibernate.demo.dto.ClassRoomDTO;
-import com.hibernate.demo.model.ClassRoomId;
+import com.hibernate.demo.model.compositeIds.ClassRoomId;
 
 import java.util.List;
 import java.util.Optional;

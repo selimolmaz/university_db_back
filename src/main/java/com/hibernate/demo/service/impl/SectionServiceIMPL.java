@@ -3,7 +3,7 @@ package com.hibernate.demo.service.impl;
 import com.hibernate.demo.dto.SectionDTO;
 import com.hibernate.demo.mapper.SectionMapper;
 import com.hibernate.demo.model.Section;
-import com.hibernate.demo.model.SectionId;
+import com.hibernate.demo.model.compositeIds.SectionId;
 import com.hibernate.demo.repository.SectionRepository;
 import com.hibernate.demo.service.SectionService;
 import org.springframework.beans.factory.annotation.Autowired;

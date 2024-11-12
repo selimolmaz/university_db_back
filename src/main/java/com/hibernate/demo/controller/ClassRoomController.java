@@ -1,7 +1,7 @@
 package com.hibernate.demo.controller;
 
 import com.hibernate.demo.dto.ClassRoomDTO;
-import com.hibernate.demo.model.ClassRoomId;
+import com.hibernate.demo.model.compositeIds.ClassRoomId;
 import com.hibernate.demo.service.ClassRoomService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

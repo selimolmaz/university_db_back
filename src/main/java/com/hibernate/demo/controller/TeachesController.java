@@ -2,7 +2,7 @@ package com.hibernate.demo.controller;
 
 import com.hibernate.demo.dto.TeachesDTO;
 import com.hibernate.demo.service.TeachesService;
-import com.hibernate.demo.model.TeachesId;
+import com.hibernate.demo.model.compositeIds.TeachesId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,10 +1,9 @@
 package com.hibernate.demo.service;
 
 import com.hibernate.demo.dto.PrereqDTO;
-import com.hibernate.demo.model.PrerequisiteId;
+import com.hibernate.demo.model.compositeIds.PrerequisiteId;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface PrereqService {
     PrereqDTO savePrereq(PrereqDTO prereqDTO);

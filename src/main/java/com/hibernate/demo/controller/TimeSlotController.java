@@ -1,7 +1,7 @@
 package com.hibernate.demo.controller;
 
 import com.hibernate.demo.dto.TimeSlotDTO;
-import com.hibernate.demo.model.TimeSlotId;
+import com.hibernate.demo.model.compositeIds.TimeSlotId;
 import com.hibernate.demo.service.TimeSlotService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

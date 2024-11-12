@@ -3,7 +3,7 @@ package com.hibernate.demo.service.impl;
 import com.hibernate.demo.dto.ClassRoomDTO;
 import com.hibernate.demo.mapper.ClassRoomMapper;
 import com.hibernate.demo.model.ClassRoom;
-import com.hibernate.demo.model.ClassRoomId;
+import com.hibernate.demo.model.compositeIds.ClassRoomId;
 import com.hibernate.demo.repository.ClassRoomRepository;
 import com.hibernate.demo.service.ClassRoomService;
 import org.springframework.stereotype.Service;

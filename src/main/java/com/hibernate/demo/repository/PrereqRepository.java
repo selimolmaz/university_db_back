@@ -1,7 +1,7 @@
 package com.hibernate.demo.repository;
 
 import com.hibernate.demo.model.Prereq;
-import com.hibernate.demo.model.PrerequisiteId;
+import com.hibernate.demo.model.compositeIds.PrerequisiteId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

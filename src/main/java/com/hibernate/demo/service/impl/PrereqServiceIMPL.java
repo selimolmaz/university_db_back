@@ -3,15 +3,12 @@ package com.hibernate.demo.service.impl;
 import com.hibernate.demo.dto.PrereqDTO;
 import com.hibernate.demo.mapper.PrereqMapper;
 import com.hibernate.demo.model.Prereq;
-import com.hibernate.demo.model.PrerequisiteId;
+import com.hibernate.demo.model.compositeIds.PrerequisiteId;
 import com.hibernate.demo.repository.PrereqRepository;
 import com.hibernate.demo.service.PrereqService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 @Service
 public class PrereqServiceIMPL implements PrereqService {

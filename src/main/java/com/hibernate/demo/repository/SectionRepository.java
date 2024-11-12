@@ -1,7 +1,7 @@
 package com.hibernate.demo.repository;
 
 import com.hibernate.demo.model.Section;
-import com.hibernate.demo.model.SectionId;
+import com.hibernate.demo.model.compositeIds.SectionId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

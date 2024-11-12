@@ -3,7 +3,7 @@ package com.hibernate.demo.service.impl;
 import com.hibernate.demo.dto.TakesDTO;
 import com.hibernate.demo.mapper.TakesMapper;
 import com.hibernate.demo.model.Takes;
-import com.hibernate.demo.model.TakesId;
+import com.hibernate.demo.model.compositeIds.TakesId;
 import com.hibernate.demo.repository.TakesRepository;
 import com.hibernate.demo.service.TakesService;
 import org.springframework.stereotype.Service;

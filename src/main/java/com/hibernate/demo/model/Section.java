@@ -1,15 +1,11 @@
 package com.hibernate.demo.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.hibernate.demo.model.compositeIds.SectionId;
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Check;
-import org.hibernate.validator.constraints.Range;
-
-import java.util.List;
 
 @Entity
 @Table(name = "section")

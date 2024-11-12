@@ -1,6 +1,7 @@
 package com.hibernate.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.hibernate.demo.model.compositeIds.TakesId;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

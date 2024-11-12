@@ -1,5 +1,6 @@
 package com.hibernate.demo.model;
 
+import com.hibernate.demo.model.compositeIds.PrerequisiteId;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

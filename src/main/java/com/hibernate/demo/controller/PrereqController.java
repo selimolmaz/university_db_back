@@ -1,7 +1,7 @@
 package com.hibernate.demo.controller;
 
 import com.hibernate.demo.dto.PrereqDTO;
-import com.hibernate.demo.model.PrerequisiteId;
+import com.hibernate.demo.model.compositeIds.PrerequisiteId;
 import com.hibernate.demo.service.PrereqService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

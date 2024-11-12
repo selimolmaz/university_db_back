@@ -1,5 +1,6 @@
 package com.hibernate.demo.model;
 
+import com.hibernate.demo.model.compositeIds.ClassRoomId;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;

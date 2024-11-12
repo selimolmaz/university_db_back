@@ -1,4 +1,5 @@
-package com.hibernate.demo.model;
+package com.hibernate.demo.model.compositeIds;
+
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
@@ -7,12 +8,11 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-@Embeddable
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TakesId implements Serializable {
-    private String studentId;
+@Embeddable
+public class SectionId implements Serializable {
     private String courseId;
     private String secId;
     private String semester;

@@ -1,4 +1,4 @@
-package com.hibernate.demo.model;
+package com.hibernate.demo.model.compositeIds;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

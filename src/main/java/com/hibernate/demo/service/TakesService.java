@@ -1,7 +1,7 @@
 package com.hibernate.demo.service;
 
 import com.hibernate.demo.dto.TakesDTO;
-import com.hibernate.demo.model.TakesId;
+import com.hibernate.demo.model.compositeIds.TakesId;
 
 import java.util.List;
 import java.util.Optional;
