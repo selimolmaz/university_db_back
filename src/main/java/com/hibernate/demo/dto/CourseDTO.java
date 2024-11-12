@@ -1,5 +1,6 @@
 package com.hibernate.demo.dto;
 
+import com.hibernate.demo.model.Department;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,4 +15,5 @@ public class CourseDTO {
     private String title;
     private String deptName;
     private BigDecimal credits;
+    private Department department;
 }

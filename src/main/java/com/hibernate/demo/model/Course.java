@@ -30,8 +30,7 @@ public class Course {
     @Min(value = 0, message = "Credit must be positive")
     private BigDecimal credits;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "dept_name", referencedColumnName = "dept_name", insertable = false, updatable = false)
-    @JsonIgnore
     private Department department;
 }
