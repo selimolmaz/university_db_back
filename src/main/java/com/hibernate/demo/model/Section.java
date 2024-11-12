@@ -42,11 +42,11 @@ public class Section {
     @Column(name = "time_slot_id", length = 4)
     private String timeSlotId;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "course_id", referencedColumnName = "course_id", insertable = false, updatable = false)
     private Course course;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumns({
             @JoinColumn(name = "building", referencedColumnName = "building", insertable = false, updatable = false),
             @JoinColumn(name = "room_number", referencedColumnName = "room_number", insertable = false, updatable = false)
