@@ -51,7 +51,7 @@ public class Takes {
     })
     private Section section;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID", referencedColumnName = "ID", insertable = false, updatable = false)
     @JsonIgnore
     private Student student;
