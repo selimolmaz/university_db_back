@@ -17,6 +17,6 @@ public class SectionDTO {
     private String building;
     private String roomNumber;
     private String timeSlotId;
-    private Course course;
-    private ClassRoom classRoom;
+    private CourseDTO course;
+    private ClassRoomDTO classRoom;
 }
