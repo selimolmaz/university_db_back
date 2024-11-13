@@ -13,4 +13,6 @@ public class TeachesDTO {
     private String secId;
     private String semester;
     private int year;
+    private SectionDTO section;
+    private InstructorDTO instructor;
 }

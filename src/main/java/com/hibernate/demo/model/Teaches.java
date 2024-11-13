@@ -39,7 +39,7 @@ public class Teaches {
     @Range(min = 1701, max = 2100, message = "Year must between 1701 and 2100")
     private int year;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumns({
             @JoinColumn(name = "course_id", referencedColumnName = "course_id", insertable = false, updatable = false),
             @JoinColumn(name = "sec_id", referencedColumnName = "sec_id", insertable = false, updatable = false),
@@ -48,9 +48,8 @@ public class Teaches {
     })
     private Section section;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ID", referencedColumnName = "ID", insertable = false, updatable = false)
-    @JsonIgnore
     private Instructor instructor;
 
 }
