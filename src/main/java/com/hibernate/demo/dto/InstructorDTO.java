@@ -14,4 +14,5 @@ public class InstructorDTO {
     private String name;
     private BigDecimal salary;
     private String deptName;
+    private DepartmentDTO department;
 }

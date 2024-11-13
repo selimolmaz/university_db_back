@@ -29,8 +29,7 @@ public class Instructor {
     @Column(name = "dept_name", length = 20)
     private String deptName;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "dept_name", referencedColumnName = "dept_name", insertable = false, updatable = false)
-    @JsonIgnore
     private Department department;
 }
