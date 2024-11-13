@@ -30,8 +30,7 @@ public class Student {
     private String deptName;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "dept_name", referencedColumnName = "dept_name", insertable = false, updatable = false)
-    @JsonIgnore
     private Department department;
 }

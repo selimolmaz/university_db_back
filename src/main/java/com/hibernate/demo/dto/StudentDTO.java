@@ -12,4 +12,5 @@ public class StudentDTO {
     private String name;
     private int totCred;
     private String deptName;
+    private DepartmentDTO department;
 }
