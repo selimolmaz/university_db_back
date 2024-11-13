@@ -15,5 +15,5 @@ public class CourseDTO {
     private String title;
     private String deptName;
     private BigDecimal credits;
-    private Department department;
+    private DepartmentDTO department;
 }
