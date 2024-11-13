@@ -42,7 +42,7 @@ public class Takes {
     @Column(name = "grade", length = 2)
     private String grade;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumns({
             @JoinColumn(name = "course_id", referencedColumnName = "course_id", insertable = false, updatable = false),
             @JoinColumn(name = "sec_id", referencedColumnName = "sec_id", insertable = false, updatable = false),
@@ -51,8 +51,7 @@ public class Takes {
     })
     private Section section;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ID", referencedColumnName = "ID", insertable = false, updatable = false)
-    @JsonIgnore
     private Student student;
 }

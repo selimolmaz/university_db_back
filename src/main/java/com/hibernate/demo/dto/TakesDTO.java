@@ -14,4 +14,6 @@ public class TakesDTO {
     private String semester;
     private int year;
     private String grade;
+    private SectionDTO section;
+    private StudentDTO student;
 }
