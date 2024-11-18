@@ -9,5 +9,6 @@ public interface InstructorService {
     InstructorDTO saveInstructor(InstructorDTO instructorDTO);
     Optional<InstructorDTO> getInstructorById(String id);
     List<InstructorDTO> getAllInstructor();
+    List<InstructorDTO> getInstructorsByDeptName(String department);
     void deleteInstructorById(String id);
 }

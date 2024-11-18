@@ -51,6 +51,11 @@ public class InstructorController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    @GetMapping("/department/{deptName}")
+    public ResponseEntity<List<InstructorDTO>> getInstructorsByDeptName(@PathVariable String deptName) {
+        List<InstructorDTO> instructorDTOS = instructorService.getInstructorsByDeptName(deptName);
+        return new ResponseEntity<>(instructorDTOS, HttpStatus.OK);
+    }
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteInstructorById(@PathVariable String id){
         instructorService.deleteInstructorById(id);

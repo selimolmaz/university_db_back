@@ -43,6 +43,14 @@ public class InstructorServiceIMPL implements InstructorService {
     }
 
     @Override
+    public List<InstructorDTO> getInstructorsByDeptName(String department) {
+        return instructorRepository.findByDeptName(department)
+                .stream()
+                .map(instructorMapper::toDTO)
+                .toList();
+    }
+
+    @Override
     public void deleteInstructorById(String id) {
         instructorRepository.deleteById(id);
     }
