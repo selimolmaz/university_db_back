@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TeachesDTO {
-    private String id;
+    private String instructorId;
     private String courseId;
     private String secId;
     private String semester;

@@ -1,5 +1,6 @@
 package com.hibernate.demo.controller;
 
+import com.hibernate.demo.dto.SectionDTO;
 import com.hibernate.demo.dto.TeachesDTO;
 import com.hibernate.demo.service.TeachesService;
 import com.hibernate.demo.model.compositeIds.TeachesId;
@@ -45,6 +46,19 @@ public class TeachesController {
     public ResponseEntity<TeachesDTO> saveTeaches(@RequestBody TeachesDTO teachesDTO) {
         TeachesDTO savedTeachesDTO = teachesService.saveTeaches(teachesDTO);
         return new ResponseEntity<>(savedTeachesDTO, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/section")
+    public ResponseEntity<TeachesDTO> getTeachesBySection(@RequestBody SectionDTO sectionDTO) {
+        return teachesService.getTeachesBySection(sectionDTO)
+                .map(teachesDTO -> new ResponseEntity<>(teachesDTO, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @GetMapping("/instructor/{instructorId}")
+    public ResponseEntity<List<TeachesDTO>> getTeachesByInstructorId(@PathVariable String instructorId) {
+        List<TeachesDTO> instructorDTOS = teachesService.getteachesByInstructorId(instructorId);
+        return new ResponseEntity<>(instructorDTOS, HttpStatus.OK);
     }
 
     @DeleteMapping

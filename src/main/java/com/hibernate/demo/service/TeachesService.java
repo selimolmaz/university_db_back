@@ -1,5 +1,6 @@
 package com.hibernate.demo.service;
 
+import com.hibernate.demo.dto.SectionDTO;
 import com.hibernate.demo.dto.TeachesDTO;
 import com.hibernate.demo.model.compositeIds.TeachesId;
 
@@ -12,7 +13,11 @@ public interface TeachesService {
 
     List<TeachesDTO> getAllTeaches();
 
+    List<TeachesDTO> getteachesByInstructorId(String instructorId);
+
     TeachesDTO saveTeaches(TeachesDTO teachesDTO);
 
     boolean deleteTeaches(TeachesDTO teachesDTO);
+
+    Optional<TeachesDTO> getTeachesBySection(SectionDTO sectionDTO);
 }

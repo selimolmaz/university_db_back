@@ -12,7 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TeachesId implements Serializable {
-    private String id;
+    private String instructorId;
     private String courseId;
     private String secId;
     private String semester;
