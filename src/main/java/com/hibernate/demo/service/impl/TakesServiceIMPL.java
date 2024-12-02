@@ -53,6 +53,14 @@ public class TakesServiceIMPL implements TakesService {
     }
 
     @Override
+    public List<TakesDTO> getBySectionId(String courseId, String secId, String semester, int year) {
+        return takesRepository.findByCourseIdAndSecIdAndSemesterAndYear(courseId, secId, semester, year)
+                .stream()
+                .map(takesMapper::toDTO)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public void deleteTakesById(TakesId takesId) {
         takesRepository.deleteById(takesId);
     }

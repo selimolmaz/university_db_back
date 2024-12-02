@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface TakesRepository extends JpaRepository<Takes, TakesId> {
     List<Takes> findByStudentId(String studentId);
+    List<Takes> findByCourseIdAndSecIdAndSemesterAndYear(String courseId, String secId,String semester, int year);
 }
