@@ -45,6 +45,14 @@ public class CourseServiceIMPL implements CourseService {
     }
 
     @Override
+    public List<CourseDTO> getCoursesByDeptName(String deptName) {
+        return courseRepository.findByDeptName(deptName)
+                .stream()
+                .map(courseMapper::toDTO)
+                .toList();
+    }
+
+    @Override
     public void deleteCourseById(String courseId) {
         courseRepository.getReferenceById(courseId);
     }

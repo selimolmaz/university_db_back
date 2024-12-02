@@ -9,5 +9,6 @@ public interface CourseService {
     CourseDTO saveCourse(CourseDTO courseDTO);
     Optional<CourseDTO> getCourseById(String courseId);
     List<CourseDTO> getAllCourses();
+    List<CourseDTO> getCoursesByDeptName(String deptName);
     void deleteCourseById(String courseId);
 }

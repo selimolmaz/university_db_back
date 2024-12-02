@@ -43,6 +43,12 @@ public class CourseController {
         return new ResponseEntity<>(courseDTOS, HttpStatus.OK);
     }
 
+    @GetMapping("/dept/{deptName}")
+    public ResponseEntity<List<CourseDTO>> getCoursesByDeptName(@PathVariable String deptName) {
+        List<CourseDTO> courseDTOS = courseService.getCoursesByDeptName(deptName);
+        return new ResponseEntity<>(courseDTOS, HttpStatus.OK);
+    }
+
     @GetMapping("/{courseId}")
     public ResponseEntity<CourseDTO> getcourseById(@PathVariable String courseId) {
         return courseService.getCourseById(courseId)
