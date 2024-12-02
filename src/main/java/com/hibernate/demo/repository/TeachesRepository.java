@@ -26,4 +26,6 @@ public interface TeachesRepository extends JpaRepository<Teaches, TeachesId> {
 
     List<Teaches> findByInstructorId(String instructorId);
 
+    List<Teaches> findByCourseId(String courseId);
+
 }

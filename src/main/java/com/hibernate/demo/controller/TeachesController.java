@@ -48,7 +48,7 @@ public class TeachesController {
         return new ResponseEntity<>(savedTeachesDTO, HttpStatus.CREATED);
     }
 
-    @GetMapping("/section")
+    @PostMapping("/section")
     public ResponseEntity<TeachesDTO> getTeachesBySection(@RequestBody SectionDTO sectionDTO) {
         return teachesService.getTeachesBySection(sectionDTO)
                 .map(teachesDTO -> new ResponseEntity<>(teachesDTO, HttpStatus.OK))
@@ -59,6 +59,12 @@ public class TeachesController {
     public ResponseEntity<List<TeachesDTO>> getTeachesByInstructorId(@PathVariable String instructorId) {
         List<TeachesDTO> instructorDTOS = teachesService.getteachesByInstructorId(instructorId);
         return new ResponseEntity<>(instructorDTOS, HttpStatus.OK);
+    }
+
+    @GetMapping("/course/{courseId}")
+    public ResponseEntity<List<TeachesDTO>> getTeachesByCourseId(@PathVariable String courseId) {
+        List<TeachesDTO> courseDTOS = teachesService.getTeachesByCourseId(courseId);
+        return new ResponseEntity<>(courseDTOS, HttpStatus.OK);
     }
 
     @DeleteMapping

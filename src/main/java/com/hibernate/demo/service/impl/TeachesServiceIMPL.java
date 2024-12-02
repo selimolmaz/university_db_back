@@ -52,6 +52,14 @@ public class TeachesServiceIMPL implements TeachesService {
     }
 
     @Override
+    public List<TeachesDTO> getTeachesByCourseId(String courseId) {
+        return teachesRepository.findByCourseId(courseId)
+                .stream()
+                .map(teachesMapper::toDTO)
+                .toList();
+    }
+
+    @Override
     public TeachesDTO saveTeaches(TeachesDTO teachesDTO) {
         Teaches teaches = teachesMapper.toEntity(teachesDTO);
         Teaches savedTeaches = teachesRepository.save(teaches);

@@ -15,6 +15,8 @@ public interface TeachesService {
 
     List<TeachesDTO> getteachesByInstructorId(String instructorId);
 
+    List<TeachesDTO> getTeachesByCourseId(String courseId);
+
     TeachesDTO saveTeaches(TeachesDTO teachesDTO);
 
     boolean deleteTeaches(TeachesDTO teachesDTO);
