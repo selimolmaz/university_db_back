@@ -20,13 +20,11 @@ public class Advisor {
     @Column(name = "i_ID", length = 5)
     private String iid;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "i_ID", referencedColumnName = "ID", insertable = false, updatable = false)
-    @JsonIgnore
     private Instructor instructor;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "s_ID", referencedColumnName = "ID", insertable = false, updatable = false)
-    @JsonIgnore
     private Student student;
 }
