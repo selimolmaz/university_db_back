@@ -10,4 +10,6 @@ import lombok.NoArgsConstructor;
 public class PrereqDTO {
     private String courseId;
     private String prereqId;
+    private CourseDTO course;
+    private CourseDTO prerequisiteCourse;
 }

@@ -20,11 +20,11 @@ public class Prereq {
     @Column(name = "prereq_id", length = 8)
     private String prereqId;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "course_id", referencedColumnName = "course_id", insertable = false, updatable = false)
     private Course course;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "prereq_id", referencedColumnName = "course_id", insertable = false, updatable = false)
     private Course prerequisiteCourse;
 
